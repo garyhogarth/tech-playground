@@ -1,0 +1,58 @@
+# flow.yaml
+
+appId: host.exp.exponent
+---
+# - launchApp
+- assertNotVisible:
+    id: "checkmark-icon-AF"
+    label: "Afganistan not checked"
+- tapOn:
+    label: "Afganistan pressed"
+    id: "country-item-AF"
+- assertVisible:
+    label: "Afganistan checked"
+    id: "checkmark-icon-AF"
+- tapOn:
+    label: "Afganistan pressed"
+    id: "country-item-AF"
+- assertNotVisible:
+    label: "Afganistan not checked"
+    id: "checkmark-icon-AF"
+- tapOn:
+    label: "Afganistan pressed"
+    id: "country-item-AF"
+- tapOn:
+    label: "Albania pressed"
+    id: "country-item-AL"
+- assertVisible:
+    label: "Afganistan checked"
+    id: "checkmark-icon-AF"
+- assertVisible:
+    label: "Albania checked"
+    id: "checkmark-icon-AL"
+- scrollUntilVisible:
+    label: "Find Bulgaria"
+    element:
+      id: "country-item-BG"
+    direction: DOWN
+    visibilityPercentage: 100
+    centerElement: false
+- tapOn:
+    label: "Bulgaria pressed"
+    id: "country-item-BG"
+- assertVisible:
+    label: "Bulgaria checked"
+    id: "checkmark-icon-BG"
+- scrollUntilVisible:
+    label: "Find Afghanistan"
+    element:
+      id: "checkmark-icon-AF"
+    direction: UP
+    visibilityPercentage: 100
+    centerElement: false
+- assertVisible:
+    label: "Afganistan checked"
+    id: "checkmark-icon-AF"
+- assertVisible:
+    label: "Albania checked"
+    id: "checkmark-icon-AL"

@@ -16,6 +16,9 @@ const ChallengesHomeScreen = () => {
       <Link href="/challenges/wordle">
         <ThemedText>Wordle</ThemedText>
       </Link>
+      <Link href="/challenges/country-list">
+        <ThemedText>Country List</ThemedText>
+      </Link>
     </ParallaxScrollView>
   );
 };

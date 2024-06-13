@@ -5,6 +5,7 @@ const ChallengesLayout = () => {
     <Stack screenOptions={{ headerShown: true }}>
       <Stack.Screen options={{ title: "Challenges" }} name="index" />
       <Stack.Screen name="wordle" />
+      <Stack.Screen name="country-list" />
     </Stack>
   );
 };
